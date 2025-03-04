@@ -1,49 +1,85 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff3b2f;
 }
 
 .quiz-container {
-    width: 500px;
-    margin: 50px auto;
+    width: 60%;
+    margin: 30px auto;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#question {
-    margin-bottom: 20px;
-}
-
-#options {
-    list-style: none;
+ul {
+    list-style-type: none;
     padding: 0;
 }
 
-#options li {
-    margin-bottom: 10px;
-}
-
-#options li input[type="radio"] {
-    margin-right: 10px;
-}
-
-#submit {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: #0056b3;
+ul li {
+    margin-bottom: 15px;
 }
 
 #result {
-    margin-top: 20px;
     font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.benefits h2 {
+    animation: slideIn 1s ease-in-out;
 }
