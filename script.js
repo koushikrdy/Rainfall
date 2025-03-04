@@ -1,23 +1,33 @@
 let currentQuestion = 0;
 let score = 0;
 
-fetch('questions.json')
-    .then(response => response.json())
-    .then(data => {
-        showQuestion(data);
-    })
-    .catch(error => console.error('Error:', error));
+const questions = [
+    { question: "What is the capital of France?", options: ["Berlin", "Paris", "London", "Rome"], answer: 1 },
+    { question: "Which programming language is known as the language of the web?", options: ["Python", "JavaScript", "C++", "Ruby"], answer: 1 },
+];
 
-function showQuestion(questions) {
-    const questionElement = document.getElementById('question');
-    const optionsElement = document.getElementById('options');
-    const submitButton = document.getElementById('submit');
-    const resultElement = document.getElementById('result');
+const intro = document.querySelector('.intro');
+const quizContainer = document.querySelector('.quiz-container');
+const questionElement = document.getElementById('question');
+const optionsElement = document.getElementById('options');
+const submitButton = document.getElementById('submit');
+const resultElement = document.getElementById('result');
+const startQuizButton = document.getElementById('startQuiz');
 
-    questionElement.textContent = questions[currentQuestion].question;
+startQuizButton.addEventListener('click', () => {
+    intro.classList.add('hidden');
+    quizContainer.classList.remove('hidden');
+    showQuestion();
+});
+
+function showQuestion() {
+    const current = questions[currentQuestion];
+    
+    questionElement.textContent = current.question;
+
     optionsElement.innerHTML = '';
-
-    questions[currentQuestion].options.forEach((option, index) => {
+    
+    current.options.forEach((option, index) => {
         const li = document.createElement('li');
         const radio = document.createElement('input');
         const label = document.createElement('label');
@@ -30,33 +40,14 @@ function showQuestion(questions) {
 
         li.appendChild(radio);
         li.appendChild(label);
+        
         optionsElement.appendChild(li);
-    });
-
-    submitButton.onclick = () => {
-        const selectedOption = document.querySelector('input[name="option"]:checked');
-        if (!selectedOption) {
-            alert('Please select an option');
-            return;
-        }
-
-        const correctAnswer = questions[currentQuestion].answer;
-        if (selectedOption.value == correctAnswer) {
-            score++;
-            resultElement.textContent = 'Correct!';
-        } else {
-            resultElement.textContent = `Incorrect! The correct answer was ${questions[currentQuestion].options[correctAnswer]}`;
-        }
-
-        currentQuestion++;
-        if (currentQuestion >= questions.length) {
-            resultElement.textContent = `Quiz finished! Your score is ${score} out of ${questions.length}`;
-            submitButton.disabled = true;
-        } else {
-            setTimeout(() => {
-                showQuestion(questions);
-                resultElement.textContent = '';
-            }, 2000);
-        }
-    };
+        
+        li.style.animation = 'fadeIn 0.5s ease-in-out';
+        
+        submitButton.classList.remove('hidden');
+        
+     });
 }
+
+submitButton.addEventListener("click", () => { /*...*/ });
