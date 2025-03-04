@@ -1,3 +1,4 @@
+
 [
     {
         "question": "What is the capital of France?",
@@ -13,5 +14,60 @@
         "question": "Who painted the Mona Lisa?",
         "options": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Caravaggio"],
         "answer": 0
-    }
-]
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "options": ["H2O", "O2", "CO2", "NaCl"],
+        "answer": 0
+    },
+    {
+        "question": "Which programming language is known as the language of the web?",
+        "options": ["Python", "JavaScript", "C++", "Ruby"],
+        "answer": 1
+    },
+    {
+        "question": "What is the speed of light in a vacuum?",
+        "options": ["300,000 km/s", "150,000 km/s", "450,000 km/s", "500,000 km/s"],
+        "answer": 0
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": ["China", "Japan", "Thailand", "South Korea"],
+        "answer": 1
+    },
+    {
+        "question": "What is the powerhouse of the cell?",
+        "options": ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"],
+        "answer": 1
+    },
+    {
+        "question": "Which element has the atomic number 1?",
+        "options": ["Oxygen", "Hydrogen", "Helium", "Nitrogen"],
+        "answer": 1
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "options": ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"],
+        "answer": 0
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        "answer": 2
+    },
+    {
+        "question": "'E = mc²' is a formula by which scientist?",
+        "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+        "answer": 1
+    },
+    {
+        "question": "'The Great Wall' is located in which country?",
+        "options": ["India", "China", "Japan", "Mongolia"],
+        "answer": 1
+    },
+    {
+        "question": "'Mount Everest' lies in which mountain range?",
+        "options": ["Andes", "Rockies", "Himalayas", "'Alps'"],
+        "answer": 2 
+}]
+
